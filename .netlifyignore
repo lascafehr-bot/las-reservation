@@ -1,0 +1,7 @@
+.verify
+.git
+node_modules
+*.md
+package.json
+package-lock.json
+.netlify

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#003b49" />
+  <meta name="description" content="احجز طاولة في LAS CAFE | Book a table at LAS CAFE" />
+  <title>احجز طاولة | Book a Table — LAS CAFE</title>
+  <link rel="icon" href="media/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="shell">
+    <aside class="brand" aria-label="LAS CAFE">
+      <div class="brand-photo"></div>
+      <div class="brand-veil"></div>
+      <div class="brand-inner">
+        <img class="brand-logo" src="media/las-logo.png" alt="LAS CAFE" />
+        <div class="brand-foot">
+          <p class="brand-kicker">Taste Your Feeling</p>
+          <h1 class="brand-title">تجربة مختلفة<br />في عالم المقاهي</h1>
+          <p class="brand-copy">احجز طاولتك في لاس، واستمتع بقهوة مختصة في أجواء أنيقة — داخل المقهى أو في التراس.</p>
+          <div class="brand-rule">
+            <span class="brand-rule-time">60</span>
+            <span class="brand-rule-text">
+              دقيقة لكل جلسة
+              <small>Sitting time will not exceed 60 minutes</small>
+            </span>
+          </div>
+          <div class="brand-social">
+            <a href="https://www.instagram.com/las_cafe0" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@las_cafe" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 4c.6 2.4 2.2 4 4.5 4.4v3.1c-1.6 0-3.1-.5-4.4-1.4v6.6A5.7 5.7 0 1 1 11 11.1v3.2a2.6 2.6 0 1 0 1.8 2.5V4h1.7z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="stage">
+      <header class="stage-head">
+        <img class="stage-logo" src="media/las-logo.png" alt="" />
+        <p class="eyebrow">LAS CAFE</p>
+        <h2>احجز طاولة <span>| Book a Table</span></h2>
+        <p class="stage-lead">أدخل بياناتك وسنجهّز طاولتك. الحجز لخمسة أشخاص كحد أقصى.</p>
+      </header>
+
+      <form id="bookingForm" class="form" novalidate>
+        <div class="field">
+          <label for="customer_name">
+            <span class="ar">الإسم</span>
+            <span class="en">Name</span>
+          </label>
+          <input id="customer_name" name="customer_name" type="text" autocomplete="name" required />
+          <p class="error" data-error-for="customer_name"></p>
+        </div>
+
+        <div class="field">
+          <label for="phone_number">
+            <span class="ar">رقم الجوال</span>
+            <span class="en">Phone Number</span>
+          </label>
+          <input id="phone_number" name="phone_number" type="tel" inputmode="numeric" autocomplete="tel" placeholder="05********" required pattern="^(05|5)[0-9]{8}$" />
+          <p class="hint">مثال: 0512345678</p>
+          <p class="error" data-error-for="phone_number"></p>
+        </div>
+
+        <div class="field">
+          <span class="label-row" id="people-label">
+            <span class="ar">عدد الأشخاص</span>
+            <span class="en">Number of People</span>
+          </span>
+          <div class="stepper" dir="ltr" role="group" aria-labelledby="people-label">
+            <button type="button" class="stepper-btn" id="people-minus" aria-label="Decrease guests">−</button>
+            <input id="number_of_people" name="number_of_people" type="number" min="1" max="5" required inputmode="numeric" aria-live="polite" />
+            <button type="button" class="stepper-btn" id="people-plus" aria-label="Increase guests">+</button>
+          </div>
+          <p class="hint">من 1 إلى 5 أشخاص | 1 to 5 guests</p>
+          <p class="error" data-error-for="number_of_people"></p>
+        </div>
+
+        <fieldset class="choice-block">
+          <legend>
+            <span class="ar">عوائل أو شباب</span>
+            <span class="en">Guys or Families</span>
+          </legend>
+          <div class="choice-grid choice-grid-2">
+            <label class="choice">
+              <input type="radio" name="boys_or_families" value="عوائل" required />
+              <span class="choice-card">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="8.5" r="2.1" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 18.5c.4-3 2.2-4.7 4.7-4.7s4.2 1.6 4.6 4.4M13.2 13.9c1.9-.2 3.7 1.2 4.3 4.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <strong>عوائل</strong>
+                <em>Families</em>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="boys_or_families" value="شباب" required />
+              <span class="choice-card">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="2.6" stroke="currentColor" stroke-width="1.5"/><path d="M6.8 18.5c.6-3.4 2.6-5.2 5.2-5.2s4.6 1.8 5.2 5.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <strong>شباب</strong>
+                <em>Guys</em>
+              </span>
+            </label>
+          </div>
+          <p class="error" data-error-for="boys_or_families"></p>
+        </fieldset>
+
+        <fieldset class="choice-block">
+          <legend>
+            <span class="ar">الموقع</span>
+            <span class="en">Location</span>
+          </legend>
+          <div class="choice-grid choice-grid-3">
+            <label class="choice">
+              <input type="radio" name="internal_or_external" value="داخل المقهى" required />
+              <span class="choice-card">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 10.5 12 5l7.5 5.5V19a1 1 0 0 1-1 1h-4.2v-5.2H9.7V20H5.5a1 1 0 0 1-1-1v-8.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <strong>داخل المقهى</strong>
+                <em>Inside the Cafe</em>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="internal_or_external" value="خارج المقهى" required />
+              <span class="choice-card">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.4 6.4l1.1 1.1M16.5 16.5l1.1 1.1M17.6 6.4l-1.1 1.1M7.5 16.5l-1.1 1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <strong>خارج المقهى</strong>
+                <em>Outside the Cafe</em>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="internal_or_external" value="أي مكان" required />
+              <span class="choice-card">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s6.2-5.2 6.2-10.2A6.2 6.2 0 0 0 12 4.6a6.2 6.2 0 0 0-6.2 6.2C5.8 15.8 12 21 12 21z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10.8" r="2.1" stroke="currentColor" stroke-width="1.5"/></svg>
+                <strong>أي مكان</strong>
+                <em>Anywhere</em>
+              </span>
+            </label>
+          </div>
+          <p class="error" data-error-for="internal_or_external"></p>
+        </fieldset>
+
+        <label class="policy">
+          <input type="checkbox" id="flexCheckDefault" name="seating_policy" required />
+          <span class="policy-box" aria-hidden="true"></span>
+          <span class="policy-text">أوافق على أن وقت الجلوس لن يتجاوز 60 دقيقة، حتى نستطيع خدمة أصدقاء آخرين</span>
+        </label>
+        <p class="error" data-error-for="flexCheckDefault"></p>
+        <p class="hint">يُمنع إدخال أو تناول أي طلبات أو مأكولات من خارج الكافيه.</p>
+
+        <button type="submit" class="submit" id="submitBtn">
+          <span>احجز الآن | Book Now</span>
+        </button>
+      </form>
+
+      <section class="success" id="success" hidden>
+        <div class="success-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M14 24.5 21 31.5 34 17.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="eyebrow">LAS CAFE</p>
+        <h2>تم استلام حجزك</h2>
+        <p class="success-lead">Your table request is confirmed. kindly arrive on time — seating is 60 minutes.</p>
+        <article class="ticket" id="ticket"></article>
+        <button type="button" class="ghost" id="newBooking">حجز جديد | New Booking</button>
+      </section>
+
+      <p class="stamp" id="lastUpdated"></p>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

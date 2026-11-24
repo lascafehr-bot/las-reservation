@@ -1,0 +1,7 @@
+.verify/
+node_modules/
+publish/
+.netlify/
+.DS_Store
+Thumbs.db
+.wrangler/
